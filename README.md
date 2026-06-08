@@ -24,7 +24,7 @@ A solução foi automatizar toda essa análise. O robô roda de hora em hora, co
 
 ## 🔧 Fluxo de Automação no n8n
 
-![Fluxo n8n](screenshots/N8N-AUTOMACAO.jpg)
+![Fluxo n8n](screenshot/N8N-AUTOMACAO.jpg)
 
 O fluxo roda a cada 30 Minutos e funciona assim:
 
@@ -45,7 +45,7 @@ Gatilho (1h) → Binance BTC ─┐
 
 ## 📬 Sinais no Telegram
 
-![Sinais Telegram](screenshots/Print-TELEGRAM.jpg)
+![Sinais Telegram](screenshot/Print-TELEGRAM.jpg)
 
 Cada mensagem entregue no Telegram tem este formato:
 
