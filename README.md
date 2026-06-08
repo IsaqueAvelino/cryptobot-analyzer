@@ -17,10 +17,15 @@ A solução foi automatizar toda essa análise. O robô roda de 30 em 30 minutos
 - Busca os últimos 30 candles de cada ativo direto na **API pública da Binance**
 - Calcula **RSI**, **MACD** e **EMA20** com código Python puro
 - Classifica cada ativo como: 
+
 🟢 COMPRA
+
 🔴 VENDA 
+
 🟡 ATENÇÃO 
+
 🔵 QUEDA INTENSA  
+
 ⚪ NEUTRO
 - Envia o sinal formatado via **Telegram Bot** a cada **30 Minutos**
 - Funciona 24h no ar usando o **n8n** como orquestrador
