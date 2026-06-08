@@ -1,4 +1,4 @@
-# 🤖 CryptoBot 
+# 🤖 CryptoBot Analizer
 
 > Robô automatizado que monitora o mercado de criptomoedas **24 horas por dia**, analisando indicadores técnicos e enviando sinais de **COMPRA**, **VENDA** ou **NEUTRO** direto no Telegram — para BTC, ETH, SOL e BNB.
 
