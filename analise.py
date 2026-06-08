@@ -89,7 +89,6 @@ for i, symbol in enumerate(symbols):
         tendencia = "Mercado lateral"
         conclusao = "💤 Aguardando confirmação"
 
-    # ── Monta a mensagem formatada ───────────────────────────
     sinal = (
         f"{emoji} *{titulo}*\n"
         f"{sep}\n"
