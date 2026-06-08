@@ -6,9 +6,9 @@
 
 ## 📌 Sobre o Projeto
 
-Este projeto nasceu de uma necessidade real: um familiar meu acompanhava o mercado cripto manualmente todos os dias, tentando identificar o melhor momento para entrar ou sair de posições. O processo era cansativo, sujeito a erros emocionais e impossível de manter 24 horas por dia.
+Este projeto nasceu de uma necessidade real: um parente próximo meu acompanhava o mercado cripto manualmente todos os dias, tentando identificar o melhor momento para entrar ou sair de posições. O processo era desgastante e cansativo, sujeito a erros emocionais e impossível de manter 24 horas por dia.
 
-A solução foi automatizar toda essa análise. O robô roda de hora em hora, coleta dados reais da Binance, calcula os indicadores técnicos e entrega um sinal claro diretamente no Telegram.
+A solução foi automatizar toda essa análise. O robô roda de 30 em 30 minutos, coleta dados reais da Binance, calcula os indicadores técnicos e entrega um sinal claro diretamente no Telegram.
 
 ---
 
@@ -16,8 +16,13 @@ A solução foi automatizar toda essa análise. O robô roda de hora em hora, co
 
 - Busca os últimos 30 candles de cada ativo direto na **API pública da Binance**
 - Calcula **RSI**, **MACD** e **EMA20** com código Python puro
-- Classifica cada ativo como 🟢 COMPRA, 🔴 VENDA, 🟡 ATENÇÃO, 🔵 QUEDA INTENSA ou ⚪ NEUTRO
-- Envia o sinal formatado via **Telegram Bot** a cada **1 hora**
+- Classifica cada ativo como: 
+🟢 COMPRA
+🔴 VENDA 
+🟡 ATENÇÃO 
+🔵 QUEDA INTENSA  
+⚪ NEUTRO
+- Envia o sinal formatado via **Telegram Bot** a cada **30 Minutos**
 - Funciona 24h no ar usando o **n8n** como orquestrador
 
 ---
@@ -29,7 +34,7 @@ A solução foi automatizar toda essa análise. O robô roda de hora em hora, co
 O fluxo roda a cada 30 Minutos e funciona assim:
 
 ```
-Gatilho (1h) → Binance BTC ─┐
+Gatilho (30m) → Binance BTC ─┐
               Binance BNB ──┤
               Binance ETH ──┼→ Fusão → Código Python → Telegram
               Binance SOL ──┘
@@ -58,7 +63,6 @@ Cada mensagem entregue no Telegram tem este formato:
 📉 EMA20:        Abaixo da EMA20 (R$ 358.200,00)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
 ✅ Ativo subvalorizado com reversão
-🕐 09:15 UTC
 ```
 
 ---
@@ -120,13 +124,10 @@ cryptobot-analyzer/
 ---
 
 ## ⚠️ Aviso Legal
-
-> Este projeto é exclusivamente para fins **educacionais e de portfólio**.
-> Os sinais gerados **não constituem recomendação de investimento**.
 > Criptomoedas são ativos de alto risco. **Nunca invista mais do que pode perder.**
 
 ---
 
 <p align="center">
-  Feito com ❤️ por <strong>Isaque Rocha</strong>
+  Feito por <strong>Isaque Rocha</strong>
 </p>
